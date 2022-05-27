@@ -1,0 +1,16 @@
+\DTLloaddb{other_metrics_cor}{data/csv/gen/other_metrics_cor.csv}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Coefficients for Spearman correlation between global metrics and lint frequency in different scenarios. Values above $0.25$ are printed bold.}
+    \label{tab:other_metrics_cor}
+    \begin{tabular}{lcrrr}\toprule
+    Score & Aggregation & SLOC & $d_B$ & $d_B^\text{lin}$\\
+    \midrule
+	\multirow{4}{*}{per entry} & \\[-\normalbaselineskip]
+	\DTLforeach*[\DTLiseq{\score}{entry}]{other_metrics_cor}{\dl=d_l,\dllin=d_l_lin,\score=score,\sloc=sloc,\agg=aggregation}{\DTLiffirstrow{}{\\} & \agg & \sloc & \dl & \dllin}
+    \\\cmidrule{1-5}
+    \DTLforeach*[\DTLiseq{\score}{theory}]{other_metrics_cor}{\dl=d_l,\dllin=d_l_lin,\score=score,\sloc=sloc,\agg=aggregation}{per theory & \agg & \sloc & \dl & \dllin}
+    \\\bottomrule
+    \end{tabular}
+\end{table}

@@ -1,0 +1,15 @@
+\DTLloaddb{metrics_correlation}{data/csv/gen/metrics_correlation.csv}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Coefficients of Spearman correlation between centrality metrics for individual formal entity graphs, all significant at $p<.001$, $n=\SI[round-mode=places,round-precision=1]{\metricCorrelationN}{\million}$. Values above $s=0.5$ are printed bold.}
+    \label{tab:metrics_correlation}
+    \begin{tabular}{lrrrrrr}\toprule
+    & $k_\textrm{in}$ & $k_\textrm{out}$ & $CC$ & $C_\lambda$ & $C_\textrm{dist}$  & $C_p$
+    \DTLforeach*{metrics_correlation}{\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering,\rowname=rowname}{
+        \DTLiffirstrow{\\\cmidrule{1-7}}{\\}
+        \rowname & \in & \out & \clustering & \eigenvector & \closeness & \betweenness
+    }
+    \\\bottomrule
+    \end{tabular}
+\end{table}

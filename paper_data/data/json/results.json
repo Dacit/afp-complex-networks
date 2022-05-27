@@ -1,0 +1,342 @@
+{
+  "Free-Groups": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Free-Groups/FreeGroups.html#FreeGroups.free_group|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Free-Groups/FreeGroups.html#FreeGroups.group.lift|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Free-Groups/FreeGroups.html#FreeGroups.group.lift_is_unique|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Free-Groups/Isomorphisms.html#Isomorphisms.isomorphic_free_groups_bases|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Free-Groups/PingPongLemma.html#PingPongLemma.ping_pong_lemma|thm"
+    ],
+    "main_theorems": true
+  },
+  "General-Triangle": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/General-Triangle/GeneralTriangle.html#GeneralTriangle.general|const"
+    ],
+    "theorems": [],
+    "main_theorems": false
+  },
+  "Chandy_Lamport": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Distributed_System.html#Distributed_System.configuration|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Distributed_System.html#Distributed_System.event|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Distributed_System.html#Distributed_System.distributed_system|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Trace.html#Trace.distributed_system.trace|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Trace.html#Trace.distributed_system.s|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.stable|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.l1|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.l2|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.swap_events|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.snapshot_after_all_prerecording_events|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.desired_trace_always_exists|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Trace.html#Trace.distributed_system.exists_trace_for_any_i_j|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.snapshot_algorithm_must_terminate|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Chandy_Lamport/Snapshot.html#Snapshot.computation.Stable_Property_Detection|thm"
+    ],
+    "main_theorems": false
+  },
+  "LTL_Master_Theorem": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Master_Theorem.html#Master_Theorem.master_theorem|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction_size.ltl_to_dra_size|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra_restricted_alphabet|thm"
+    ],
+    "main_theorems": true
+  },
+  "LTL_Normal_Form": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Normal_Form/Normal_Form_Code_Export.html#Normal_Form_Code_Export.normal_form|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Normal_Form/Normal_Form.html#Normal_Form.normal_form_with_flatten_pi_2|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Normal_Form/Normal_Form_Code_Export.html#Normal_Form_Code_Export.normal_form_correct|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Normal_Form/Normal_Form_Complexity.html#Normal_Form_Complexity.flatten_card_sf(1)|thm"
+    ],
+    "main_theorems": true
+  },
+  "Locally-Nameless-Sigma": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/TypedSigma.html#TypedSigma.typing|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/Environments.html#Environments.ok|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/Sigma.html#Sigma.openz|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/Sigma.html#Sigma.sterm|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/Sigma.html#Sigma.beta|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/ParRed.html#ParRed.beta_confluent|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/TypedSigma.html#TypedSigma.progress|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/TypedSigma.html#TypedSigma.subject_reduction|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/Sigma.html#Sigma.sopen_sclose_eq_ssubst|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Locally-Nameless-Sigma/Sigma.html#Sigma.ssubst_sopen_commute|thm"
+    ],
+    "main_theorems": false
+  },
+  "Ergodic_Theory": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Invariants.html#Invariants.qmpt.Invariants|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Recurrence.html#Recurrence.conservative|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Ergodicity.html#Ergodicity.ergodic_pmpt|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Measure_Preserving_Transformations.html#Measure_Preserving_Transformations.measure_preserving|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Measure_Preserving_Transformations.html#Measure_Preserving_Transformations.pmpt|locale"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Ergodicity.html#Ergodicity.ergodic_pmpt.birkhoff_theorem_AE|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Gouezel_Karlsson.html#Gouezel_Karlsson.pmpt.Gouezel_Karlsson_Kingman'|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Kingman.html#Kingman.ergodic_pmpt.kingman_theorem(1)|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Recurrence.html#Recurrence.conservative_mpt.induced_function_integral_nonergodic(1)|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Ergodic_Theory/Normalizing_Sequences.html#Normalizing_Sequences.pmpt_limit.polynomial_growth|thm"
+    ],
+    "main_theorems": true
+  },
+  "Separata": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra|class",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.tern_rel|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.starr_applied|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.starr_applied|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.starr_applied|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.magicl_applied|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.sep_septraction|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.lspasl_starr_der|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.heap_sep_algebra.lspasl_starr_eq|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.sep_substate_tran|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.precise_sep_conj|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Separata/Separata.html#Separata.sep_split_substate|thm"
+    ],
+    "main_theorems": false
+  },
+  "Extended_Finite_State_Machines": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM.html#EFSM.transition_matrix|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM.html#EFSM.possible_steps|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM.html#EFSM.accepts_trace|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM.html#EFSM.obtainable|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM_LTL.html#EFSM_LTL.watch|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM.html#EFSM.prefix_closure|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM.html#EFSM.simulation_implies_trace_equivalent|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM_LTL.html#EFSM_LTL.once_none_always_none|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM_LTL.html#EFSM_LTL.no_output_none|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machines/EFSM_LTL.html#EFSM_LTL.no_updates_none|thm"
+    ],
+    "main_theorems": true
+  },
+  "Extended_Finite_State_Machine_Inference": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Subsumption.html#Subsumption.subsumes|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Subsumption.html#Subsumption.directly_subsumes|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Inference.html#Inference.resolve_nondeterminism|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Inference.html#Inference.infer|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/PTA_Generalisation.html#PTA_Generalisation.derestrict|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Subsumption.html#Subsumption.direct_subsumption|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Subsumption.html#Subsumption.directly_subsumes_reflexive|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Subsumption.html#Subsumption.directly_subsumes_transitive|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Store_Reuse_Subsumption.html#Store_Reuse_Subsumption.generalise_output_directly_subsumes_original|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Extended_Finite_State_Machine_Inference/Inference.html#Inference.merge_states_symmetry|thm"
+    ],
+    "main_theorems": true
+  },
+  "Deep_Learning": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/Tensor.html#Tensor.tensor|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/Lebesgue_Functional.html#Lebesgue_Functional.lborel_f|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/Tensor_Rank.html#Tensor_Rank.cprank|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/DL_Network.html#DL_Network.convnet|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/DL_Deep_Model.html#DL_Deep_Model.witness|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/Lebesgue_Zero_Set.html#Lebesgue_Zero_Set.lebesgue_mpoly_zero_set|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/DL_Rank_CP_Rank.html#DL_Rank_CP_Rank.matrix_rank_le_cp_rank|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/DL_Fundamental_Theorem_Network_Capacity.html#DL_Fundamental_Theorem_Network_Capacity.example.if_polynomial_0_rank|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/DL_Fundamental_Theorem_Network_Capacity.html#DL_Fundamental_Theorem_Network_Capacity.deep_model_correct_params_y.fundamental_theorem_network_capacity|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Deep_Learning/DL_Deep_Model.html#DL_Deep_Model.deep_model_correct_params_y.witness_det|thm"
+    ],
+    "main_theorems": false
+  },
+  "Simplicial_complexes_and_boolean_functions": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/Simplicial_complex.html#Simplicial_complex.simplicial_complex.simplicial_complex|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/Simplicial_complex.html#Simplicial_complex.ceros_of_boolean_input|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/Simplicial_complex.html#Simplicial_complex.simplicial_complex_induced_by_monotone_boolean_function|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/Bij_betw_simplicial_complex_bool_func.html#Bij_betw_simplicial_complex_bool_func.simplicial_complex.bool_vec_from_simplice|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/Bij_betw_simplicial_complex_bool_func.html#Bij_betw_simplicial_complex_bool_func.simplicial_complex.boolean_function_from_simplicial_complex|const"
+    ],
+    "theorems": [],
+    "main_theorems": false
+  },
+  "Latin_Square": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.latin_square|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.latin_rect|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.partial_latin_square|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.next|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.without|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.union_limited_replicates|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.latin_rect_iff|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.latin_rect_card_col|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Latin_Square/Latin_Square.html#Latin_Square.latin_rect_card_num|thm"
+    ],
+    "main_theorems": false
+  },
+  "Name_Carrying_Type_Inference": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Name_Carrying_Type_Inference/SimplyTyped.html#SimplyTyped.trm|type"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Name_Carrying_Type_Inference/SimplyTyped.html#SimplyTyped.fresh.barendregt|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Name_Carrying_Type_Inference/SimplyTyped.html#SimplyTyped.fresh.infer_valid|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Name_Carrying_Type_Inference/SimplyTyped.html#SimplyTyped.fresh.preservation|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Name_Carrying_Type_Inference/SimplyTyped.html#SimplyTyped.fresh.confluence|thm"
+    ],
+    "main_theorems": false
+  },
+  "Adaptive_State_Counting": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/FSM.html#FSM.FSM|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/ATC.html#ATC.ATC|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/ASC_LB.html#ASC_LB.LB|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/ASC_Suite.html#ASC_Suite.TS|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/FSM_Product.html#FSM_Product.productF|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/ASC_LB.html#ASC_LB.LB_count|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/FSM_Product.html#FSM_Product.sequence_to_failure_reaches_FAIL|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/ASC_Suite.html#ASC_Suite.final_iteration_ex|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/ASC_Suite.html#ASC_Suite.TS_non_containment_causes(1)|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Adaptive_State_Counting/FSM.html#FSM.observable_path_unique|thm"
+    ],
+    "main_theorems": false
+  },
+  "IsaGeoCoq": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.Col|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.Midpoint|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.Coplanar|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.CongA|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.midpoint_existence|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.l5_1|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.angle_construction_1|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.conga_cop__or_out_ts|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/IsaGeoCoq/Tarski_Neutral.html#Tarski_Neutral.Tarski_neutral_dimensionless.l8_18_existence|thm"
+    ],
+    "main_theorems": false
+  },
+  "Van_der_Waerden": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Digits.html#Digits.digits|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Van_der_Waerden.html#Van_der_Waerden.arith_prog|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Van_der_Waerden.html#Van_der_Waerden.multi_arith_prog|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Van_der_Waerden.html#Van_der_Waerden.vdw_lemma|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Van_der_Waerden.html#Van_der_Waerden.vdw|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Van_der_Waerden.html#Van_der_Waerden.vdw_imp_vdw_lemma|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Van_der_Waerden/Van_der_Waerden.html#Van_der_Waerden.vdw_lemma_imp_vdw|thm"
+    ],
+    "main_theorems": true
+  },
+  "Orbit_Stabiliser": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Orbit_Stabiliser.html#Orbit_Stabiliser.orbit_stabiliser.orbit|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Orbit_Stabiliser.html#Orbit_Stabiliser.orbit_stabiliser.stabiliser|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Orbit_Stabiliser.html#Orbit_Stabiliser.orbit_stabiliser|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Tetrahedron.html#Tetrahedron.simple_rotations|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Tetrahedron.html#Tetrahedron.complex_rotationsp|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Orbit_Stabiliser.html#Orbit_Stabiliser.orbit_stabiliser.stabiliser_subgroup|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Orbit_Stabiliser.html#Orbit_Stabiliser.orbit_stabiliser.orbit_stabiliser_bij|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Tetrahedron.html#Tetrahedron.is_tetrahedral_group|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Tetrahedron.html#Tetrahedron.is_stabiliser|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Orbit_Stabiliser/Tetrahedron.html#Tetrahedron.complex_rotations_invariants|thm"
+    ],
+    "main_theorems": false
+  },
+  "Hahn_Jordan_Decomposition": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space|locale",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.pos_meas_set|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.neg_meas_set|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.hahn_space_decomp|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.jordan_decomp|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.exists_pos_meas_subset|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.hahn_decomposition|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.jordan_decomposition|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Hahn_Jordan_Decomposition/Hahn_Jordan_Decomposition.html#Hahn_Jordan_Decomposition.signed_measure_space.jordan_decomposition_unique(1)|thm"
+    ],
+    "main_theorems": true
+  },
+  "TESL_Language": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/TESL.html#TESL.clock|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Run.html#Run.run|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/StutteringDefs.html#StutteringDefs.dilating|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/StutteringDefs.html#StutteringDefs.contracting|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Operational.html#Operational.operational_semantics_intro|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Operational.html#Operational.operational_semantics_elim|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Corecursive_Prop.html#Corecursive_Prop.HeronConf_interpretation|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Stuttering.html#Stuttering.TESL_stuttering_invariant|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Hygge_Theory.html#Hygge_Theory.soundness|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Hygge_Theory.html#Hygge_Theory.completeness|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/TESL_Language/Hygge_Theory.html#Hygge_Theory.progress|thm"
+    ],
+    "main_theorems": true
+  },
+  "Inductive_Inference": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Partial_Recursive.html#Partial_Recursive.recf|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Partial_Recursive.html#Partial_Recursive.eval|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Universal.html#Universal.r_phi|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Standard_Results.html#Standard_Results.P1|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Inductive_Inference_Basics.html#Inductive_Inference_Basics.Lim|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Universal.html#Universal.r_univ'|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Standard_Results.html#Standard_Results.goedel_numbering_phi|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Standard_Results.html#Standard_Results.kleene_fixed_point|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/Lemma_R.html#Lemma_R.lemma_R_for_Lim_effective|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Inductive_Inference/CONS_LIM.html#CONS_LIM.CONS_subset_Lim|thm"
+    ],
+    "main_theorems": false
+  },
+  "Goodstein_Lambda": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.goodstein|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.goodsteinC|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.goodsteinO|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.goodstein\\<^sub>O|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.C|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.hbase|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.Ord|type"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.O2C_C2O|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.N2H_inv|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.H2N_inv|thm"
+    ],
+    "main_theorems": false
+  }
+}

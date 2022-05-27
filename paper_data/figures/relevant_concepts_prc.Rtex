@@ -1,0 +1,3 @@
+<<relevant_concepts_prc, dev='tikz', echo = FALSE, fig.pos="!htbp", fig.align = 'center', fig.height=2.98, fig.width=4.82, fig.cap="Precision-recall curve for prediction of defining positions for important concepts, with varying number of top-$N$ elements selected.">>=
+source("relevant_concepts_prc.R")
+@

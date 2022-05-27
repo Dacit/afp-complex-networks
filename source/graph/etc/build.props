@@ -1,0 +1,28 @@
+title = Graph Tools
+module = $GRAPH_JAR
+requirements = \
+  env:ISABELLE_SCALA_JAR \
+  $AFP_BASE/tools/lib/classes/afp_tools.jar \
+  $UTILS_JAR \
+  $GRAPH_DEPS_JAR
+sources = \
+  src/afpextra/afp_analysis.scala \
+  src/afpextra/afp_graph_analysis.scala \
+  src/afpextra/afp_send_mail.scala \
+  src/afpextra/tools.scala \
+  src/graph/cypher/cypher_analysis_repository.scala \
+  src/graph/cypher/cypher_filter.scala \
+  src/graph/cypher/cypher_graph_repository.scala \
+  src/graph/cypher/cypher_query.scala \
+  src/graph/cypher/neo4j_data_repository.scala \
+  src/graph/analysis.scala \
+  src/graph/analysis_repository.scala \
+  src/graph/analysis_service.scala \
+  src/graph/edge_importer.scala \
+  src/graph/filter.scala \
+  src/graph/graph.scala \
+  src/graph/graph_repository.scala \
+  src/graph/graph_service.scala \
+  src/graph/importer_service.scala
+services = \
+  isabelle.afpextra.Tools

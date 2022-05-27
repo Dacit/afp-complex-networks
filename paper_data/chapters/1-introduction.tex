@@ -1,0 +1,57 @@
+\section{Introduction}
+Interactive proof assistants (ITPs) have become quite mature,
+to a point were even novel research can be performed in a theorem prover,
+such as the recently completed proof of the Clausen-Scholze theorem in Lean~\cite{Scholze2021Scholze}.
+At the same time,
+not much is known empirically about the structure of formalizations.
+
+Due to long-term community efforts,
+large-scale collections of formalized material exist in some (earlier) systems
+such as \emph{Mizar}~\cite{Mizar1992Rudnicki} (\emph{Mizar Mathematical Library}) and \emph{Isabelle}~\cite{Isabelle1998Paulson} (\emph{Archive of Formal Proofs}).
+At the time of writing, the Archive of Formal Proofs (AFP) consists of over three million lines of code,
+and more than \num{195000} lemmas have been proven
+in its \num{675} different articles (called \emph{entries})~\cite{Statistics2022Afp}.
+Entries are characterized by their metadata (abstract, authors, topics, etc.)
+and Isabelle theories, with are structured into \emph{sessions} (usually a single one per entry).
+
+At the mark of one million lines of code,
+the size and authorship distribution in the AFP, and how those evolved over time, has been analyzed~\cite{MiningAFP2015Blanchette},
+as well as some (mostly) syntactic properties.
+It was found that proofs made up \SI{58}{\percent} of the code,
+and the total proof size has a roughly quadratic relationship with the number of constants in the goal.
+However, except for some insights into the entry import-graph
+(where it became apparent that only very few entries were re-used),
+the syntactical analysis tells us very little about the underlying formalization structure.
+
+\textbf{Problem}.
+As libraries and archives expand and ITP use becomes more widespread,
+understanding the formalization structure becomes critical.
+Due to the vastness of formalization archives,
+it is important to aid users in grasping material faster and more easily.
+Moreover, building high-quality formalizations
+that are re-usable and extensible in the first place is key.
+
+\textbf{Solution}.
+The related problems in the field of software engineering are widely studied.
+It is found that methodology from \emph{complex network science} ---
+which is concerned with the structural properties of networks from all kinds of empirical research ---
+is applicable to a wide range of problems
+and often superior to analysis of software-specific characteristics~\cite{DefectsMetrics2008Zimmermann,FractalDimension2013Turnu}.
+This gives rise to analyzing the dependency graphs of formalizations
+to determine whether complex network methodology is applicable
+and which concrete questions can be answered.
+
+\textbf{Contribution}.
+In this work, we investigate the formalization network of the Isabelle AFP
+for patterns commonly found in complex networks.
+We also examine two concrete problems, namely,
+assessing formalization quality,
+and identifying the most important parts of formalizations.
+Our source code and data is publicly available\footnote{\url{https://github.com/dacit/afp-complex-networks}}.
+
+\textbf{Organization}.
+In Section~\ref{sec:background},
+we give an overview about concepts of complex networks,
+and discuss in Section~\ref{sec:related_software} how they are used in related work in software engineering.
+We report our analysis and findings in Section~\ref{sec:network},
+and discuss our conclusions in Section~\ref{sec:conclusion}.

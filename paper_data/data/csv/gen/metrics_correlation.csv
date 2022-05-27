@@ -1,0 +1,7 @@
+"rowname","out_degree","eigenvector","in_degree","closeness","betweenness","clustering"
+"$k_\textrm{in}$","$\shortminus .18$","$.50$","","$\bf{.97}$","$\bf{.76}$","$\shortminus .10$"
+"$k_\textrm{out}$","","$\shortminus .31$","$\shortminus .18$","$\shortminus .19$","$.16$","$\shortminus .13$"
+"$CC$","$\shortminus .13$","$\shortminus .13$","$\shortminus .10$","$\shortminus .08$","$\shortminus .09$",""
+"$C_\lambda$","$\shortminus .31$","","$.50$","$\bf{.56}$","$.38$","$\shortminus .13$"
+"$C_\textrm{dist}$","$\shortminus .19$","$\bf{.56}$","$\bf{.97}$","","$\bf{.77}$","$\shortminus .08$"
+"$C_p$","$.16$","$.38$","$\bf{.76}$","$\bf{.77}$","","$\shortminus .09$"

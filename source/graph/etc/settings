@@ -1,0 +1,8 @@
+#-*- shell-script -*- :mode=shellscript:
+
+GRAPH_HOME="$COMPONENT"
+
+GRAPH_DEPS_JAR="$GRAPH_HOME/lib/graph-deps.jar"
+classpath "$GRAPH_DEPS_JAR"
+
+GRAPH_JAR="$GRAPH_HOME/lib/graph.jar"

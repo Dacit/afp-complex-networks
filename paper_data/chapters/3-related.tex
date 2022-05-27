@@ -1,0 +1,28 @@
+\section{Complex Network Science in Software Engineering}\label{sec:related_software}
+
+For software systems,
+Valverde et al.~\cite{ScaleFreeSoftware2002Valverde} first discovered scale-free and small-world behavior and ascribed it to modularity requirements.
+Myers~\cite{Networks2003Myers} found class graphs and procedure calls to be weakly scale-free,
+and attributed those properties to object-oriented (OO) design.
+However, rigorous statistical testing was not performed
+(and in fact, for most networks claimed to be scale-free, other distributions are more likely~\cite{ScalefreeRare2019Broido}).
+
+Fractal dimension has been studied for software systems by Concas et al.~\cite{FracDimSoftware2006Concas},
+where $d_B$ was found to usually be in the range of \numrange{3}{5}.
+Moreover, Turnu et al.~\cite{FractalDimension2013Turnu} found the fractal dimension to be strongly correlated with OO software quality indicators
+and with the number of defects that later occurred,
+whereas correlations with OO quality metrics would not be significant at the common significance level of $p = 0.05$.
+
+Network centrality measures  have been found to be suitable for defect prediction as well:
+Zimmermann and Nagappan~\cite{DefectsMetrics2008Zimmermann} found that out-degree and eigenvector centrality (among others) are more strongly correlated than OO metrics,
+but slightly worse than other software engineering metrics;
+overall, the correlation is of medium strength.
+However, for predicting central binaries,
+network centrality measures greatly outperformed other complexity measures.
+These results could later only be confirmed for larger-scale projects (on a source-code level)~\cite{NetworkDefects2009Tosun}.
+
+\v{S}ubelj and Bajec~\cite{CommunityDetect2011Subelj} have used complex network methodology for community detection,
+i.e., to find structurally grouped modules.
+Later, they successfully employed the detection on java class graphs to infer the package structure with high accuracy
+as well as to separate the graph into structurally similar partitions,
+which could be used to generate refactoring recommendations~\cite{Networks2012Subelj,Clustering2012Subelj}.

@@ -1,0 +1,58 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{numprint}
+\usepackage{datatool}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{csquotes}
+\usepackage{pgfplotstable}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage{amsfonts} %% <- also included by amssymb
+\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\input{data/data}
+
+\def\stripzero#1{\expandafter\stripzerohelp#1}
+\def\stripzerohelp#1{\ifx 0#1\expandafter\stripzerohelp\else#1\fi}
+\newcommand{\striprnd}[2]{\ifx#2\empty\else\npdecimalsign{.}\npnoaddmissingzero\nprounddigits{#1}\numprint{\stripzero{#2}}\fi{}}
+\DeclareSIUnit{\million}{\text{million}}
+\newcommand{\fOne}[0]{\ensuremath{F_1}}
+\begin{document}
+%
+\title{Formal Entity Graphs as Complex Networks: Assessing Centrality Metrics of the Archive of Formal Proofs}
+%
+\titlerunning{AFP Formal Entity Graphs as Complex Networks}
+%
+\author{Fabian Huch\orcidID{0000-0002-9418-1580}}
+%
+\authorrunning{F. Huch}
+
+\institute{Technische Universität München, Boltzmannstraße 3, 85748 Garching, Germany
+\email{huch@in.tum.de}}
+%\url{http://www.springer.com/gp/computer-science/lncs}
+%
+\maketitle              % typeset the header of the contribution
+%
+
+\input{chapters/0-abstract}
+\input{chapters/1-introduction}
+\input{chapters/2-background}
+\input{chapters/3-related}
+\input{chapters/4-network}
+\input{chapters/5-conclusion}
+
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
+\end{document}

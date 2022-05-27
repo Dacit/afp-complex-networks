@@ -1,0 +1,45 @@
+<<echo=FALSE>>=
+options(scipen=999)
+source('../data/data.R')
+@
+
+\def\numEmails{219}
+\def\numEmailsUnreachable{56}
+\def\numReplies{39}
+\def\numAnswers{\Sexpr{num_answers}}
+
+\def\numGraphs{\Sexpr{num_graphs}}
+\def\numNodes{\Sexpr{num_nodes/1000000}}
+\def\numEdges{\Sexpr{num_edges/1000000}}
+\def\numTotalNodes{\Sexpr{num_total_nodes/1000000}}
+\def\numTotalEdges{\Sexpr{num_total_edges/1000000}}
+
+\def\avgCC{\Sexpr{avg_cc}}
+\def\avgCCEr{\Sexpr{avg_cc_er}}
+\def\avgL{\Sexpr{avg_l}}
+\def\avgLEr{\Sexpr{avg_l_er}}
+
+\def\degreeFullAlpha{\Sexpr{degree_full_alpha}}
+\def\degreeFullPlLnR{\Sexpr{degree_full_pl_ln_r}}
+\def\degreeIndRawNum{\Sexpr{degree_ind_raw_num}}
+\def\degreeIndNum{\Sexpr{degree_ind_num}}
+\def\degreeIndAlpha{\Sexpr{degree_ind_alpha}}
+\def\degreeIndPlPrefNum{\Sexpr{degree_ind_pl_pref_num}}
+
+\def\metricCorrelationN{\Sexpr{metric_correlation_n / 1000000}}
+
+\def\lintCorrelationOptS{\Sexpr{lint_correlation_opt_val}}
+\def\lintCorrelationDlOptS{\Sexpr{lint_correlation_d_l_opt_val}}
+\def\lintCorrelationSlocOptS{\Sexpr{lint_correlation_sloc_opt_val}}
+
+\def\bestPredThmOptF{\Sexpr{prediction_thm_best_metric_opt %>% the(f1)}}
+
+\def\bestPredMaxPre{\Sexpr{prediction_best_metric_max_pre %>% the(pre) * 100}}
+\def\bestPredMaxPreRec{\Sexpr{prediction_best_metric_max_pre %>% the(rec) * 100}}
+\def\bestPredOptF{\Sexpr{prediction_best_metric_opt %>% the(f1)}}
+\def\bestPredOptN{\Sexpr{prediction_best_metric_opt %>% the(n)}}
+\def\bestPredOptPre{\Sexpr{prediction_best_metric_opt %>% the(pre) * 100}}
+\def\bestPredOptRec{\Sexpr{prediction_best_metric_opt %>% the(rec) * 100}}
+\def\bestPredOptTwoN{\Sexpr{prediction_best_metric_opt2 %>% the(n)}}
+\def\bestPredOptTwoPre{\Sexpr{prediction_best_metric_opt2 %>% the(pre) * 100}}
+\def\bestPredOptTwoRec{\Sexpr{prediction_best_metric_opt2 %>% the(rec) * 100}}

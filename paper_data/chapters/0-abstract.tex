@@ -1,0 +1,25 @@
+\begin{abstract}
+Formalization libraries for interactive theorem provers are rapidly growing in size,
+but only little is understood structurally about those developments.
+We aim to address the arising challenges by utilizing dependency graphs of the underlying formal entities.
+For the Isabelle Archive of Formal Proofs, the individual entry graphs consist of \SI[round-mode=places,round-precision=1]{\numNodes}{\million} nodes and \SI[round-mode=places,round-precision=1]{\numEdges}{\million} edges in total,
+and exhibit certain complex network characteristics:
+Node in-degrees weakly follow scale-free distributions with an average exponent of $\alpha=\num[round-mode=places,round-precision=2]{\degreeIndAlpha}$,
+and the high clustering coefficient (avg.\ \num[round-mode=places,round-precision=2]{\avgCC})
+together with the short average path length (\num[round-mode=places,round-precision=2]{\avgL})
+indicate small-world effects.
+We did not find network centrality metrics to be good indicators of theory quality (measured by lint frequency):
+The Spearman correlation of our six different centrality metrics was weaker than in similar experiments from software systems,
+and with a coefficient of $s=\num[round-mode=places,round-precision=2]{\lintCorrelationSlocOptS}$,
+the source lines of code metric exhibited a stronger correlation than all centrality metrics considered.
+In contrast, network centrality metrics worked well in predicting the most important concepts within AFP entries:
+Of the definitions deemed most important by entry authors,
+\SI[round-mode=places,round-precision=1]{\bestPredOptRec}{\percent} could be identified
+at a precision of \SI[round-mode=places,round-precision=1]{\bestPredOptPre}{\percent}
+(optimal \fOne-score),
+using in-degree centrality.
+At the cost of a few percentage points of precision,
+a second maximum can be achieved with \SI[round-mode=places,round-precision=1]{\bestPredOptTwoRec}{\percent} recall.
+
+\keywords{Isabelle \and Archive of Formal Proofs \and Complex networks \and Dependency graph \and Formal entity network \and Centrality metrics \and Formalization quality.}
+\end{abstract}

@@ -1,0 +1,31 @@
+\DTLloaddb{centrality_metrics_cor}{data/csv/gen/centrality_metrics_cor.csv}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Coefficients of Spearman correlation between centrality metrics and lint frequency in different scenarios, significant at the $p=0.01$ level. Values above $s=0.25$ are printed bold.}
+    \label{tab:centrality_metrics_cor}
+    \begin{tabular}{llcrrrrrr}
+    \toprule
+    Lint Frequency & Subgraph & Aggregation & $k_\textrm{in}$ & $k_\textrm{out}$ & $CC$ & $C_\lambda$ & $C_\textrm{dist}$  & $C_p$ \\
+    \midrule
+    \multirow{6}{*}{per entry} & \multirow{3}{*}{entities} \\[-\normalbaselineskip]
+    \DTLforeach*[\DTLiseq{\granularity}{entry} \AND \DTLiseq{\nodes}{entity} \AND \DTLiseq{\score}{mean}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{entry} \AND \DTLiseq{\nodes}{entity} \AND \DTLiseq{\score}{total}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{entry} \AND \DTLiseq{\nodes}{entity} \AND \DTLiseq{\score}{max}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\\cmidrule{2-9}}
+    & \multirowcell{3}[0pt][l]{defining\\ positions} \\[-\normalbaselineskip]
+    \DTLforeach*[\DTLiseq{\granularity}{entry} \AND \DTLiseq{\nodes}{position} \AND \DTLiseq{\score}{mean}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{entry} \AND \DTLiseq{\nodes}{position} \AND \DTLiseq{\score}{total}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{entry} \AND \DTLiseq{\nodes}{position} \AND \DTLiseq{\score}{max}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\\cmidrule{1-9}}
+    \multirow{7}{*}{per theory} & \multirow{3}{*}{entities} \\[-\normalbaselineskip]
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{entity} \AND \DTLiseq{\score}{mean}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{entity} \AND \DTLiseq{\score}{total}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{entity} \AND \DTLiseq{\score}{max}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\\cmidrule{2-9}}
+    & \multirowcell{3}[0pt][l]{defining\\ positions} \\[-\normalbaselineskip]
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{position} \AND \DTLiseq{\score}{mean}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{position} \AND \DTLiseq{\score}{total}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\}
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{position} \AND \DTLiseq{\score}{max}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness \\\cmidrule{2-9}}
+    & theories \\[-\normalbaselineskip]
+    \DTLforeach*[\DTLiseq{\granularity}{theory} \AND \DTLiseq{\nodes}{theory}]{centrality_metrics_cor}{\score=score,\nodes=nodes,\granularity=granularity,\out=out_degree,\in=in_degree,\eigenvector=eigenvector,\closeness=closeness,\betweenness=betweenness,\clustering=clustering}{ & & \score & \in & \out & \clustering & \eigenvector & \closeness & \betweenness}\\
+    \bottomrule
+    \end{tabular}
+\end{table}

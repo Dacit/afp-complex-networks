@@ -1,0 +1,9 @@
+title = Isabelle Utils
+module = $UTILS_JAR
+requirements = \
+  env:ISABELLE_SCALA_JAR
+sources = \
+  src/tools.scala \
+  src/utils.scala
+services = \
+  isabelle.utils.Tools

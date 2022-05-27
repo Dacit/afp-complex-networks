@@ -1,0 +1,109 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}\usepackage[]{graphicx}\usepackage[]{color}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{numprint}
+\usepackage{datatool}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{csquotes}
+\usepackage{pgfplotstable}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage{amsfonts} %% <- also included by amssymb
+\DeclareMathSymbol{\shortminus}{\mathbin}{AMSa}{"39}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\input{data/data}
+
+\def\stripzero#1{\expandafter\stripzerohelp#1}
+\def\stripzerohelp#1{\ifx 0#1\expandafter\stripzerohelp\else#1\fi}
+\newcommand{\striprnd}[2]{\ifx#2\empty\else\npdecimalsign{.}\npnoaddmissingzero\nprounddigits{#1}\numprint{\stripzero{#2}}\fi{}}
+\DeclareSIUnit{\million}{\text{million}}
+\newcommand{\fOne}[0]{\ensuremath{F_1}}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+%
+\title{Formal Entity Graphs as Complex Networks: Assessing Centrality Metrics of the Archive of Formal Proofs}
+%
+\titlerunning{AFP Formal Entity Graphs as Complex Networks}
+%
+\author{Fabian Huch\orcidID{0000-0002-9418-1580}}
+%
+\authorrunning{F. Huch}
+
+\institute{Technische Universität München, Boltzmannstraße 3, 85748 Garching, Germany
+\email{huch@in.tum.de}}
+%\url{http://www.springer.com/gp/computer-science/lncs}
+%
+\maketitle              % typeset the header of the contribution
+%
+
+\input{chapters/0-abstract}
+\input{chapters/1-introduction}
+\input{chapters/2-background}
+\input{chapters/3-related}
+\input{chapters/4-network}
+\input{chapters/5-conclusion}
+
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
+\end{document}

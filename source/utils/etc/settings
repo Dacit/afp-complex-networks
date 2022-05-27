@@ -1,0 +1,5 @@
+# -*- shell-script -*- :mode=shellscript:
+
+UTILS_HOME="$COMPONENT"
+
+UTILS_JAR="$UTILS_HOME/lib/utils.jar"
