@@ -40,17 +40,6 @@
     ],
     "main_theorems": false
   },
-  "LTL_Master_Theorem": {
-    "concepts": [
-      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra|const"
-    ],
-    "theorems": [
-      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Master_Theorem.html#Master_Theorem.master_theorem|thm",
-      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction_size.ltl_to_dra_size|thm",
-      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra_restricted_alphabet|thm"
-    ],
-    "main_theorems": true
-  },
   "LTL_Normal_Form": {
     "concepts": [
       "https://www.isa-afp.org/browser_info/current/AFP/LTL_Normal_Form/Normal_Form_Code_Export.html#Normal_Form_Code_Export.normal_form|const"
@@ -338,5 +327,38 @@
       "https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/Goodstein_Lambda.html#Goodstein_Lambda.H2N_inv|thm"
     ],
     "main_theorems": false
+  },
+  "Modular_Assembly_Kit_Security": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/EventSystems.html#EventSystems.ES_rec|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/Views.html#Views.V_rec|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/BasicSecurityPredicates.html#BasicSecurityPredicates.BSP|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/InformationFlowProperties.html#InformationFlowProperties.IFP_type|type",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/InformationFlowProperties.html#InformationFlowProperties.IFPIsSatisfied|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/UnwindingResults.html#UnwindingResults.Unwinding.unwinding_theorem_BSD|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/CompositionalityResults.html#CompositionalityResults.Compositionality.compositionality_BSD|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/UnwindingResults.html#UnwindingResults.Unwinding.unwinding_theorem_BSI|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/Modular_Assembly_Kit_Security/CompositionalityResults.html#CompositionalityResults.Compositionality.compositionality_BSI|thm"
+    ]
+  },
+  "LTL_Master_Theorem": {
+    "concepts": [
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Advice.html#Advice.GF_advice|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Advice.html#Advice.FG_advice|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/After.html#After.af_letter|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra|const",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Instantiation.html#DRA_Instantiation.ltlc_to_draei|const"
+    ],
+    "theorems": [
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Master_Theorem.html#Master_Theorem.master_theorem|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Master_Theorem.html#Master_Theorem.X_\\<G>\\<F>_Y_\\<F>\\<G>|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Master_Theorem.html#Master_Theorem.\\<G>\\<F>_implies_GF|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/Master_Theorem.html#Master_Theorem.\\%3CF%3E\\%3CG%3E_implies_FG|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra_language|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction_size.ltl_to_dra_size|thm",
+      "https://www.isa-afp.org/browser_info/current/AFP/LTL_Master_Theorem/DRA_Construction.html#DRA_Construction.dra_construction.ltl_to_dra_restricted_alphabet|thm"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 \section{Introduction}
 Interactive proof assistants (ITPs) have become quite mature,
 to a point were even novel research can be performed in a theorem prover,
-such as the recently completed proof of the Clausen-Scholze theorem in Lean~\cite{Scholze2021Scholze}.
+such as the recently completed proof of the Clausen--Scholze theorem in Lean~\cite{Proof2021Scholze}.
 At the same time,
 not much is known empirically about the structure of formalizations.
 
@@ -12,10 +12,11 @@ At the time of writing, the Archive of Formal Proofs (AFP) consists of over thre
 and more than \num{195000} lemmas have been proven
 in its \num{675} different articles (called \emph{entries})~\cite{Statistics2022Afp}.
 Entries are characterized by their metadata (abstract, authors, topics, etc.)
-and Isabelle theories, with are structured into \emph{sessions} (usually a single one per entry).
+and Isabelle \emph{sessions} (usually a single one per entry),
+i.e., collections of coherent Isabelle theories.
 
 At the mark of one million lines of code,
-the size and authorship distribution in the AFP, and how those evolved over time, has been analyzed~\cite{MiningAFP2015Blanchette},
+the size and authorship distribution in the AFP, and how those evolved over time, was analyzed~\cite{MiningAFP2015Blanchette},
 as well as some (mostly) syntactic properties.
 It was found that proofs made up \SI{58}{\percent} of the code,
 and the total proof size has a roughly quadratic relationship with the number of constants in the goal.
@@ -33,8 +34,8 @@ that are re-usable and extensible in the first place is key.
 
 \textbf{Solution}.
 The related problems in the field of software engineering are widely studied.
-It is found that methodology from \emph{complex network science} ---
-which is concerned with the structural properties of networks from all kinds of empirical research ---
+It is found that methodology from \emph{complex network science}---%
+which is concerned with the structural properties of networks from all kinds of empirical research---%
 is applicable to a wide range of problems
 and often superior to analysis of software-specific characteristics~\cite{DefectsMetrics2008Zimmermann,FractalDimension2013Turnu}.
 This gives rise to analyzing the dependency graphs of formalizations

@@ -1,6 +1,7 @@
 \section{Analysis of Formal Entity Networks}\label{sec:network}
 Generally, we denote as a \emph{formal entity network} the graph of logically relevant entities in a formalization with their relationships.
-Hence, nodes of the graph include types, constants and theorems.
+Such a network can be defined for any theorem prover system.
+For simply typed systems, nodes of the graph include types, constants and theorems.
 Depending on the logic and system used,
 other concepts may also be represented,
 for example type-classes.
@@ -14,6 +15,7 @@ Our syntactical structure consists of \emph{defining positions}
 (i.e., the Isabelle source code from which entities are created),
 theories, and sessions.
 Depending on the research question, we consider sub-graphs of the full network, e.g., only entity nodes.
+Our analysis is mostly prover-agnostic, and could in principle be transferred to other systems.
 
 The full dependency graph of the Isabelle distribution and the AFP consists of \SI[round-mode=places,round-precision=1]{\numTotalNodes}{\million} entity nodes with \SI[round-mode=places,round-precision=1]{\numTotalEdges}{\million} edges between them.
 When considering the \num{\numGraphs} nonempty sub-graphs for individual AFP entries (excluding the \texttt{slow} group, which contains a few particularly computationally extensive entries),
@@ -35,13 +37,13 @@ Hence, we analyze the individual sub-graphs for small-world effects, and compare
 In the undirected graph, the average shortest path length is \num[round-mode=places,round-precision=1]{\avgL},
 which is quite close to the expected value of \num[round-mode=places,round-precision=1]{\avgLEr} for ER-graphs.
 On average, the clustering coefficient is \num[round-mode=figures,round-precision=2]{\avgCC}
-(i.e., about one third of a nodes' neighbors are also connected), which is orders of magnitudes larger than in ER-graphs (\num[round-mode=figures,round-precision=2]{\avgCCEr}) ---
+(i.e., about one third of a nodes' neighbors are also connected), which is orders of magnitudes larger than in ER-graphs (\num[round-mode=figures,round-precision=2]{\avgCCEr})---%
 confirming the small-world hypothesis.
 
 \input{figures/degree_full}
 
 In-degree frequencies of the full dependency graph is shown in \autoref{fig:degree_full} as a scatter plot (left).
-The data roughly follows a linear line on the $\log$-$\log$ scale,
+The data roughly follows a linear line on the $\log$--$\log$ scale,
 but there are some outliers.
 The indicator line marks the fitted power-law distribution with a slope of $\alpha = \num[round-mode=places,round-precision=2]{\degreeFullAlpha}$.
 On the right of \autoref{fig:degree_full},
@@ -56,8 +58,8 @@ In a likelihood ratio test between the two plausible distributions
 the scale-free distribution is preferred with $\mathcal{R}=\num[round-mode=places,round-precision=1]{\degreeFullPlLnR}$.
 
 \input{figures/degree_ind_density}
-For dependency graphs of the individual entries
---- which are quite heterogeneous ---
+For dependency graphs of the individual entries%
+---which are quite heterogeneous\textemdash%
 a scale-free distribution is preferred only in \num{\degreeIndPlPrefNum} out of \num{\degreeIndNum} cases.
 \autoref{fig:degree_ind_density} shows the complementary cumulative distributions of a random selection of $20$ entries (names truncated).
 The larger entries tend to follow the distribution of the overall network,
@@ -66,11 +68,14 @@ This indicates that finite-size effects might skew the distribution,
 which is often the case for scale-free networks~\cite{FiniteSize2021Serafino}.
 Overall, the power-law parameter is similar, with a weighted average of $\alpha=\num[round-mode=places,round-precision=2]{\degreeIndAlpha}$ for the individual entries.
 
+While both small-world and scale-free effects don't provide easily digestible insights,
+they characterize the structure of the dependency graphs
+and indicate that complex network methodology is applicable.
 Hence, we expect that some results from complex network science carry over to our dependency graphs.
 Thus, to answer our next research questions, we utilize the centrality metrics introduced in Section~\ref{sec:background} as they are helpful for complex networks in other settings.
 We first analyze those metrics on their own:
 \autoref{tab:metrics_correlation} shows how the centrality metrics are correlated with each other in the networks of individual entries,
-as matrix of Spearman correlation coefficients $s$ (i.e., strength of the monotonic relation between two variables) ---
+as matrix of Spearman correlation coefficients $s$ (i.e., strength of the monotonic relation between two variables)---%
 all are significant with $p<.001$, $n=\SI[round-mode=places,round-precision=1]{\metricCorrelationN}{\million}$.
 Some correlations are expected, since they would also occur in random graphs.
 In-degree is strongly correlated with closeness centrality
@@ -88,13 +93,22 @@ Notably, there is also a fairly strong correlation between eigenvector and close
 Measuring formalization quality is a challenging task:
 Manual analysis is quite labor-intensive and difficult,
 as it is often not obvious on the surface why something was formalized in a certain way
-(provability usually being a key factor).
+(many design decisions come from considerations that emerge during the proofs).
 Moreover, there are no defects (like in software systems) that would give an indication about quality.
-Metrics such as change frequencies would also not provide meaningful insights due to the journal character of the AFP\@.
+Metrics such as change frequencies would also not provide meaningful insights due to the journal character of the AFP:
+Functional changes are supposed to be monotone
+(i.e., existing interfaces shouldn't be changed even if they could be improved),
+and changes for maintenance reasons don't necessarily indicate poor quality,
+as they are often caused by proofs breaking due to re-naming or re-organization of upstream material.
 Therefore, we have to rely on static analysis,
 and utilize the recently developed \emph{Isabelle linter}~\cite{Linter2022Megdiche}
-which can identify problematic anti-patterns (\emph{lints}),
-to measure formalization quality.
+for a rough indicator of formalization quality.
+The linter can identify problematic anti-patterns (\emph{lints}),
+and implements $22$ checks based on Isabelle style guides,
+focusing on maintainability and readability problems.
+For example, it would report a structured proof that starts with an invocation of \texttt{auto},
+as that obfuscates the goal to be proven and makes the proof prone to break on minor changes
+such as improvements in the simplifier.
 However, almost all available lints are concerned with proofs, so they only uncover specific kinds of problems.
 Hence, lints do not indicate structural problems of specific entities,
 but rather serve as a general quality indicator for whole theories or entries.
@@ -103,8 +117,8 @@ We compare the lint frequency to our centrality metrics in a range of scenarios,
 using the total, mean, and maximum as aggregation for the centrality scores on the formal entity network.
 For a thorough analysis, we also employ these metrics on the graph induced by theories and defining positions.
 Moreover, we utilize the fractal dimension (approximated by box covering~\cite{FractalDimension2007Song}),
-which is found to be a particularly good quality indicator in software systems
---- Tosun et al.~\cite{NetworkDefects2009Tosun} use a linear regression in the $\log$-$\log$ space to compute the power-law coefficient,
+which is found to be a particularly good quality indicator in software systems%
+---Tosun et al.~\cite{NetworkDefects2009Tosun} use a linear regression in the $\log$--$\log$ space to compute the power-law coefficient,
 which we include as $d_B^\text{lin}$ in addition to the proper stochastic fit~\cite{PowlawEmpiric2009Clauset}.
 To evaluate how useful the centrality metrics are,
 we compare their performance to that of the SLOC metric.
@@ -119,7 +133,7 @@ most metrics are slightly correlated with lint frequency,
 however the strength peaks at $s=\num[round-mode=places,round-precision=2]{\lintCorrelationOptS}$ for betweenness centrality in defining positions, using the total centrality per theory;
 several other metrics are close contenders.
 Results for the global metrics are shown in \autoref{tab:other_metrics_cor}.
-The fractal dimension performs similar to the best centrality metrics,
+The fractal dimension performs similarly to the best centrality metrics,
 with a correlation coefficient of $s=\num[round-mode=places,round-precision=2]{\lintCorrelationDlOptS}$ in the optimal case.
 The difference between the computation methods of the fractal dimension is small,
 though the regression calculation is slightly better.
@@ -150,14 +164,20 @@ e.g., the type entity with the user-supplied name for a recursive datatype defin
 To collect ground truth data, we asked AFP authors
 (who listed an e-mail address as affiliation)
 for their opinion on the five most important concepts
-and the five theorems that were most central to the reasoning in their formalization.
+and the five theorems that were most central to the reasoning in their formalization
+(as opposed to intermediate lemmas, main results, etc.).
 We included a list of unordered suggestions
 (generated by the top ten entities each of several graph metrics)
 to prompt responses,
 but prominently stated that elements not in this list should be considered as well.
-In total, we sent \num{\numEmails} e-mails (\num{\numEmailsUnreachable} addresses were unreachable) and received replies from \num{\numReplies} authors,
-of which \num{\numAnswers} contained answers suitable for our analysis
-(i.e., listing specific entities).
+In total, we sent \num{\numEmails} e-mails (\num{\numEmailsUnreachable} addresses were unreachable)
+and received replies from \num{\numReplies} authors,
+though not all answers were suitable for our analysis, i.e., listing specific entities.
+In total, the resulting ground truth dataset consists of data for \num{\numAnswers} entries,
+containing \num{\numConcepts} concepts and \num{\numTheorems} theorems
+(multiple answers for same entries joined).
+While this is sufficient to evaluate simple models with few parameters,
+it would not allow training and evaluating more complicate models such as graph neural networks.
 
 To evaluate our centrality metrics,
 we compute the match of the top-$N$ elements with the ground truth
@@ -182,7 +202,8 @@ The \fOne-score is well below $0.1$ for most metrics.
 Only the betweenness centrality performs significantly better and peaks at about \num[round-mode=places,round-precision=2]{\bestPredThmOptF},
 both when predicting the full dependency graph, and when only the sub-graph of theorem entities is considered
 (the only difference is that the peak is much sharper in the latter case).
-The absolute value may be somewhat skewed as the definition of \enquote{central theorem} was not clear to all participants who contributed the ground truth data,
+The absolute value may be somewhat skewed as the definition of \enquote{central theorem} was not clear to all participants who contributed to the ground truth data---%
+some listed main results instead---%
 but the large relative difference shows that betweenness centrality is the key metric for central theorems.
 An intuitive explanation is that central theorems are required in the transitive closure of proof dependencies of many theorems,
 and thus appear in many shortest paths.
@@ -203,5 +224,5 @@ where precision is only a little lower (\SI[round-mode=places,round-precision=1]
 However, the final choice of $N$ may depend on other user interface design considerations.
 The relatively low precision is acceptable for a generated overview,
 and due to the nature of our ground truth data (restricting to the top few elements),
-many high-ranking concepts not in the ground truth set are likely to be relevant ---
+many high-ranking concepts not in the ground truth set are likely to be relevant---%
 several responses stated that it was difficult to limit themselves to such a small set.

@@ -16,6 +16,7 @@ suppressPackageStartupMessages(library(ggcorrplot))
 suppressPackageStartupMessages(library(rlang))
 suppressPackageStartupMessages(library(reticulate))
 suppressPackageStartupMessages(library(gridExtra))
+suppressPackageStartupMessages(library(jsonlite))
 use_python('/usr/bin/python')
 powerlaw <- import('powerlaw')
 

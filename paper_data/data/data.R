@@ -99,3 +99,8 @@ lint_correlation_d_l_opt_val <- max(
   other_metrics_cor_df %>% slice(which.max(d_l)) %>% the(d_l),
   other_metrics_cor_df %>% slice(which.max(d_l_lin)) %>% the(d_l_lin))
 lint_correlation_sloc_opt_val <- other_metrics_cor_df %>% slice(which.max(sloc)) %>% the(sloc)
+lint_ground_truth_json <- fromJSON('../data/json/results.json')
+count_concepts <- function(e) { length(e$concepts) }
+count_theorems <- function(e) { length(e$theorems) }
+num_concepts <- do.call(sum, lapply(lint_ground_truth_json, count_concepts))
+num_theorems <- do.call(sum, lapply(lint_ground_truth_json, count_theorems))

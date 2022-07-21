@@ -11,23 +11,23 @@ In the following, we explain three of the most important complex network propert
 as well as graph metrics found useful in complex networks.
 We express graphs by their adjacency matrix $A$, i.e., $a_{ij}$ denotes an edge between $i$ and $j$ (we do not consider multiplicities).
 Thus, in-degree $k_\text{in}$ of a node $i$ can be defined as follows
-(out-degree $k_\text{out}$ similarly):
+(out-degree $k_\text{out}$ and overall degree $k$ similarly):
 \begin{equation}
     k_\text{in}(i) = \sum_{j\neq i}{a_{ji}}
 \end{equation}
 
 The \emph{small-world} property~\cite{SmallWorld1998Watts} describes networks which are in between regular networks
 (where every node has the same degree, e.g., lattice graphs),
-and random graphs where edges are created uniformly at random (Erd\H{o}s-R\'enyi (ER) model~\cite{RandomGraph1959Erdos}).
+and random graphs where edges are created uniformly at random (Erd\H{o}s--R\'enyi (ER) model~\cite{RandomGraph1959Erdos}).
 Small-world networks exhibit average path lengths
-that are short like in ER-graphs ---
-in contrast to regular graphs, where average path length increases linearly with size ---
+that are short like in ER-graphs---%
+in contrast to regular graphs, where average path length increases linearly with size---%
 but comparatively strong clustering, which is low in ER-graphs but high in many regular networks.
 A measure for clustering, the \emph{clustering coefficient} $CC$,
-is defined as the likelihood of a node that its neighbors are also connected to each other in the undirected graph,
+is defined as the likelihood that a node's neighbors are also connected to each other in the undirected graph,
 i.e.:
 \begin{equation}
-    CC(i) = \frac{\sum_{i\neq j\neq l}{a_{ij}a_{jl}a_{li}}}{2\cdot k(i)(k(i) - 1)}
+    CC(i) = \frac{\sum_{i\neq j,j\neq l,l\neq i}{a_{ij}a_{jl}a_{li}}}{2\cdot k(i)(k(i) - 1)}
 \end{equation}
 
 Secondly, the \emph{scale-free} property~\cite{ScaleFree1999Albert} describes networks that have no characteristic scale,
@@ -36,9 +36,9 @@ In particular,
 the \emph{in-degree} distribution of scale-free networks follows a power-law,
 for sufficiently large $k_\text{in}$ (and up to a maximal degree for finite networks):
 \begin{equation}
-    \Pr[k_\text{in}] \propto k_\text{in}^{-\alpha}
+    \Pr[k_\text{in}=x] \propto x^{-\alpha}
 \end{equation}
-In empirical scale-free networks, $\alpha$ (which represents the slope on the linear $\log$-$\log$ plot) is typically in the range of \numrange{2}{3}~\cite{PowlawEmpiric2009Clauset}.
+In empirical scale-free networks, $\alpha$ (which represents the slope on the linear $\log$--$\log$ plot) is typically in the range of \numrange{2}{3}~\cite{PowlawEmpiric2009Clauset}.
 
 The third important concept is the notion of self-similarity,
 which underlies many generative processes found in nature.
@@ -53,9 +53,10 @@ such that each node is reachable from any other within $l_B$ steps (in the undir
 In addition to in- and out-degree,
 we use the following network centrality measures
 (cf.~\cite{SnaMetrics2003Newman}) in this work:
-\emph{Eigenvector centrality} $C_\lambda$ is the solution to
+\emph{Eigenvector centrality} $C_\lambda$ is the (normalized) solution to
 $\bm{A}\bm{x} = \lambda\bm{x}$
-where $\lambda$ is the largest eigenvalue of the adjacency matrix.
+with non-negative components where $\lambda$ is the largest eigenvalue of the adjacency matrix
+(which uniquely exists since all entries are non-negative).
 Similar to PageRank~\cite{pagerank}, it yields the importance of a node in the network.
 \emph{Closeness centrality} is the average distance from a node to every other node.
 However, since it is not defined for unconnected graphs, we use harmonic closeness centrality $C_\text{dist}$.

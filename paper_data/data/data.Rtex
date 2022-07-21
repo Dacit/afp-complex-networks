@@ -5,8 +5,10 @@ source('../data/data.R')
 
 \def\numEmails{219}
 \def\numEmailsUnreachable{56}
-\def\numReplies{39}
+\def\numReplies{41}
 \def\numAnswers{\Sexpr{num_answers}}
+\def\numConcepts{\Sexpr{num_concepts}}
+\def\numTheorems{\Sexpr{num_theorems}}
 
 \def\numGraphs{\Sexpr{num_graphs}}
 \def\numNodes{\Sexpr{num_nodes/1000000}}
